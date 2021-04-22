@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Test
 
 on:
   push:
@@ -17,11 +17,12 @@ jobs:
     - run: npm ci
     - run: npm run build:ci --if-present
     - run: npm run test:ci
-#    - name: Upload dist result for test
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: dist
-#          path: dist/aurelienjames-github-io
+    - name: Upload builds artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: builds
+        path: dist/aurelienjames-github-io
+        retention-days: 1
 
 #  deploy:
 #    runs-on: ubuntu-latest
