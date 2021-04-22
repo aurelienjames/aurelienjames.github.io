@@ -24,6 +24,17 @@ jobs:
         path: dist/aurelienjames-github-io
         retention-days: 1
 
-#  deploy:
-#    runs-on: ubuntu-latest
-#    needs: test
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    - name: Download math result for job 2
+      uses: actions/download-artifact@v2
+      with:
+        name: builds
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: builds
+        FOLDER: builds
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
