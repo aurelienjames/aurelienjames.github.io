@@ -16,7 +16,7 @@ jobs:
         node-version: '15.x'
     - run: npm ci
     - run: npm run build:ci --if-present
-    - run: npm test:ci
+    - run: npm run test:ci
 #    - name: Upload dist result for test
 #        uses: actions/upload-artifact@v2
 #        with:
