@@ -38,12 +38,11 @@ jobs:
         echo "aurelienjames.com" > CNAME
     - name: Init git and commit builds artifacts
       run: |
-        ls
         git init
         git add -A
         git config --local user.email "action-bot@github.com"
         git config --local user.name "GitHub Action Bot"
-        git commit -m 'deploy'
+        git commit -m 'auto deploy'
     - name: Deploy artifacts
       uses: ad-m/github-push-action@v0.5.0
       with:
