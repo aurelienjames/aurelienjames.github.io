@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: '15.x'
     - run: npm ci
-    - run: npm run build:ci --if-present
+    - run: npm run build:ci
     - run: npm run test:ci
     - name: Upload builds artifacts
       uses: actions/upload-artifact@v2
