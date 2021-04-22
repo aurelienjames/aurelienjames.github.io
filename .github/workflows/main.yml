@@ -34,7 +34,7 @@ jobs:
       with:
         name: builds
     - name: Create CNAME file with custom domain
-      run |
+      run: |
         echo "aurelienjames.com" > CNAME
     - name: Init git and commit builds artifacts
       run: |
