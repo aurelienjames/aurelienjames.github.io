@@ -17,12 +17,11 @@ jobs:
     - run: npm ci
     - run: npm run build:ci --if-present
     - run: npm test:ci
-
-    - name: Upload dist result for test
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist/aurelienjames-github-io
+#    - name: Upload dist result for test
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: dist
+#          path: dist/aurelienjames-github-io
 
 #  deploy:
 #    runs-on: ubuntu-latest
