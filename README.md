@@ -1,5 +1,4 @@
-# AurelienjamesGithubIo ![Tests](https://github.com/aurelienjames/aurelienjames.github.io/actions/workflows/main.yml/badge.svg)
-
+# aurelienjames.github.io ![Tests](https://github.com/aurelienjames/aurelienjames.github.io/actions/workflows/main.yml/badge.svg)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
 
