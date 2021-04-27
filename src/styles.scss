@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fonts */
+$primary-font-family: 'Ultra', serif;
+$primary-font-weight: 400;
+$secondary-font-family: 'Roboto', sans-serif;
+$secondary-font-weight-normal: 100;
+$secondary-font-weight-italic: 200;
+$secondary-font-weight-bold: 400;
+
+/* Colors */
+$color-dark: #1a1a1a;
+$color-dark-grey: #424242;
+$color-light-grey: #9E9E9E;
+$color-white: #FAFAFA;
+$color-red: #E6261F;
+$color-orange: #EB7532;
+$color-yellow: #FFDA4A;
+$color-green: #7DB42B;
+$color-blue: #3B4FE1;
+$color-purple: #B02DC2;
+
+/* CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: $color-dark;
+    color: $color-light-grey;
+    font-family: $secondary-font-family;
+    font-weight: $secondary-font-weight-normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $primary-font-family;
+    font-weight: $primary-font-weight;
+    color: $color-white;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 2rem;
+}
