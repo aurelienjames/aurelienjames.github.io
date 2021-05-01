@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aurelienjames/aurelienjames.github.io/issues"
   },
-  "homepage": "https://github.com/aurelienjames/aurelienjames.github.io#readme"
+  "homepage": "https://github.com/aurelienjames/aurelienjames.github.io#readme",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
 }
