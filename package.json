@@ -4,7 +4,7 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "serve": "npx webpack serve --mode=development --hot",
+    "serve": "npx webpack serve --mode=development --hot --open",
     "build": "npx webpack --mode=production --config=webpack.config.js",
     "build:dev": "npx webpack --mode=development --config=webpack.config.js",
     "test": "npx jasmine-ts --config=jasmine.json"
@@ -21,10 +21,15 @@
   "homepage": "https://github.com/aurelienjames/aurelienjames.github.io#readme",
   "devDependencies": {
     "@types/jasmine": "^3.6.10",
-    "copy-webpack-plugin": "^8.1.1",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.4",
+    "html-webpack-plugin": "^5.3.1",
     "jasmine": "^3.7.0",
     "jasmine-spec-reporter": "^7.0.0",
     "jasmine-ts": "^0.3.3",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^11.1.0",
+    "style-loader": "^2.0.0",
     "ts-loader": "^9.1.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4",

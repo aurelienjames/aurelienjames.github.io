@@ -1,5 +1,7 @@
 const path = require('path');
-const CopyPlugin = require("copy-webpack-plugin");
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.ts',
@@ -14,15 +16,21 @@ module.exports = {
                     path.resolve(__dirname, "src")
                 ],
             },
+            {
+                test: /\.(scss|css)$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+                include: [
+                    path.resolve(__dirname, "src")
+                ],
+            },
         ],
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ],
+        extensions: ['.tsx', '.ts', '.js' ],
     },
     output: {
-        publicPath: 'dist',
-        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js',
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -30,13 +38,9 @@ module.exports = {
         port: 9000,
     },
     plugins: [
-        new CopyPlugin({
-            patterns: [{
-                from: '**/*.html',
-                context: './src',
-                force: true,
-            }
-            ],
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({ 
+            template: path.resolve(__dirname, './src/index.html'),
         })
       ],
 };
