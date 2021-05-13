@@ -4,9 +4,9 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "serve": "npx webpack serve --mode=development --hot --open",
-    "build": "npx webpack --mode=production --config=webpack.config.js",
-    "build:dev": "npx webpack --mode=development --config=webpack.config.js",
+    "serve": "npx webpack serve --mode=development -config=webpack.dev.config.js --hot --open",
+    "build": "npx webpack --mode=production --config=webpack.pro.config.js",
+    "build:dev": "npx webpack --mode=development --config=webpack.dev.config.js",
     "test": "npx jasmine-ts --config=jasmine.json"
   },
   "repository": {
