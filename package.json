@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "npx webpack serve --mode=development -config=webpack.dev.config.js --hot --open",
-    "build": "npx webpack --mode=production --config=webpack.pro.config.js",
+    "build": "npx webpack --mode=production --config=webpack.prod.config.js",
     "build:dev": "npx webpack --mode=development --config=webpack.dev.config.js",
     "test": "npx jasmine-ts --config=jasmine.json"
   },
